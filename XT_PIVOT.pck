@@ -110,7 +110,7 @@ CREATE OR REPLACE PACKAGE BODY XT_PIVOT IS
     p_cursor sys_refcursor;
  BEGIN
     EXECUTE IMMEDIATE 'alter session set cursor_sharing=force';
-    OPEN p_cursor FOR pkg_pivot.pivot_sql (
+    OPEN p_cursor FOR xt_pivot.pivot_sql (
                      p_max_cols_query
                     , p_query
                     , p_anchor
